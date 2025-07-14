@@ -25,7 +25,7 @@ public class TarefaModel {
     @Column(nullable = false)
     private String descricao;
 
-    @Column(nullable = false)
+    @Enumerated(EnumType.STRING) @Column(nullable = false)
     private TarefaEnum tarefaEnum;
 
     @Column(nullable = false)

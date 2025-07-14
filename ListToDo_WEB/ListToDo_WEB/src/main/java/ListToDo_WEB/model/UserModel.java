@@ -25,5 +25,5 @@ public class UserModel {
     private String email;
 
     @Column(nullable = false)
-    private TarefaEnum senha;
+    private String senha;
 }
