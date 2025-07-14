@@ -2,6 +2,7 @@ package ListToDo_WEB.dto;
 import ListToDo_WEB.model.UserModel;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,7 +20,7 @@ public class UserDTO {
     @NotNull(message = "Email obrigatória") @Email
     private String email;
 
-    @NotNull(message = "Senha obrigatória")
+    @NotNull(message = "Senha obrigatória") @Size(min = 6, max = 18)
     private String senha;
 
     public UserModel toUser()
