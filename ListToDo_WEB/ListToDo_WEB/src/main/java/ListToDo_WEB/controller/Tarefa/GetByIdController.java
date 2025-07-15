@@ -33,11 +33,10 @@ public class GetByIdController {
             TarefaModel tarefaRecID=tarefaID.get();
             tarefaDTO.fromTarefa(tarefaRecID);
 
-            ModelAndView mv = new ModelAndView("tarefa/getById");
+            ModelAndView mv = new ModelAndView("tarefa/showById");
             mv.addObject("tarefaDTO", tarefaRecID);
 
             return mv;
         }
     }
-
 }

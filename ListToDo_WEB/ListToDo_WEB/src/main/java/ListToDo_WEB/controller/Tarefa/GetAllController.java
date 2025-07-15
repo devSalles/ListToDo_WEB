@@ -21,7 +21,7 @@ public class GetAllController {
     @GetMapping("/getAll")
     public ModelAndView getAll()
     {
-        ModelAndView mv = new ModelAndView("home");
+        ModelAndView mv = new ModelAndView("tarefa/home");
         mv.addObject("tarefaAll",tarefasRepository.findAll());
         mv.addObject("tarefaNew", new TarefaModel());
         mv.addObject("statusTarefa", TarefaEnum.values());
