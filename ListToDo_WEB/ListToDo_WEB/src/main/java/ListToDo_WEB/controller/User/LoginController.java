@@ -2,7 +2,6 @@ package ListToDo_WEB.controller.User;
 
 import ListToDo_WEB.model.UserModel;
 import ListToDo_WEB.repository.UserRepository;
-import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,7 +31,7 @@ public class LoginController {
         UserModel userModel = this.userRepository.findByEmail(email);
         if(userModel != null && userModel.getEmail().equals(email) && userModel.getSenha().equals(senha))
         {
-            return new ModelAndView("tarefa/home");
+            return new ModelAndView("redirect:/tarefa/getAll");
         }
         else
         {
